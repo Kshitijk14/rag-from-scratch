@@ -44,6 +44,9 @@ list_of_files = [
     # tests
     "tests/__init__.py",
 
+    # docs
+    "docs/README.md",
+
     "params.yaml",
     "dvc.yaml",
     "Dockerfile",
