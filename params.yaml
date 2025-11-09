@@ -1,2 +1,32 @@
-LOG_PATH: "logs"
-DATA_PATH: "artifacts/data"
+app:
+  artifacts_dir: artifacts
+  chroma_dir: artifacts/chroma
+  log_dir: artifacts/logs
+
+
+models:
+  llm: qwen3:1.7b
+  temp: 0.0
+  embedding: sentence-transformers/paraphrase-MiniLM-l6-v2
+  ollama_base_url: http://localhost:11434
+
+
+retrieval:
+  chunk_size: 800
+  chunk_overlap: 120
+  k: 4
+  score_threshold: 0.15
+
+
+sql:
+  dialect: oracle
+  enforce_readonly: true
+  row_limit: 50
+
+
+oracle:
+  host: YOUR_HOST
+  port: 1521
+  service_name: YOUR_SERVICE
+  user_env_key: ORACLE_USER
+  pass_env_key: ORACLE_PASSWORD
